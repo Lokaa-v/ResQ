@@ -1,0 +1,166 @@
+body {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background-color: #2b0000; /* Dark red background */
+    background-image: url('login.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  
+  .page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+  
+  .title {
+    font-size: 8rem;
+    margin-bottom: 2rem;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .neon-text {
+    text-shadow: 0 0 5px #ff4d4d,
+                 0 0 10px #ff1a1a,
+                 0 0 20px #ff1a1a,
+                 0 0 30px #cc0000,
+                 0 0 40px #990000,
+                 0 0 50px #990000;
+    animation: glow 1.5s ease-in-out infinite alternate;
+  }
+  
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 5px #ff4d4d,
+                   0 0 10px #ff1a1a,
+                   0 0 20px #cc0000;
+    }
+    to {
+      text-shadow: 0 0 10px #ff6666,
+                   0 0 20px #ff1a1a,
+                   0 0 30px #cc0000,
+                   0 0 40px #990000;
+    }
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: nowrap;  /* Ensures horizontal alignment */
+    gap: 1rem;
+  }
+  
+  
+  
+  @keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+  }
+  
+  .box img {
+    width: 100%;           /* keep this */
+    height: 350px;         /* increase height from 180px to something like 250px */
+    object-fit: contain;   /* or use "cover" if you want it to crop slightly */
+    margin-bottom: 1rem;
+    border-radius: 8px;
+  }
+  
+  .box h2 {
+    margin: 0.5rem 0;
+    color: #2b0000;
+  }
+  
+  .box {
+    position: relative;
+    background-color: #eb4848;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    text-align: center;
+    width: 350px;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    z-index: 1; /* Raise this! */
+  }
+  
+  .box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff1a1a,
+    #cc0000,
+    #990000,
+    #660000,
+    #ff1a1a,
+    #ff0000
+  );
+  filter: blur(10px); /* increase from 8px */
+    background-size: 400%;
+    z-index: -2;
+    filter: blur(8px);
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    animation: glowing 20s linear infinite;
+  }
+  
+  .box:hover::before {
+    opacity: 1;
+  }
+  
+  .box::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: #f68f8f;
+    border-radius: 12px;
+    z-index: -3; /* Push this farther behind */
+  }
+  
+  
+  .box button:hover {
+    background-color: #ea3737;
+    box-shadow: 0 0 10px #621b1b;
+  }  similar to this css , i want the code which is :root {
+    --primary: #1d4ed8;
+    --secondary: #2563eb;
+    --bg: #f1f5f9;
+    --card-bg: #ffffff;
+    --text: #111827;
+    --muted-text: #6b7280;
+    --border: #f05050;
+    --radius: 16px;
+    --shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    --font: 'Orbitron', sans-serif;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+  }
+  
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+  }
+  
+  .hidden {
+    display: none !important;
+  }
+  
+  
+  

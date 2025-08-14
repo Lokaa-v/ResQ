@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+ :root {
+   --glow-color: hsl(0, 100%, 67%);
+ }
+ 
+ *,
+ *::before,
+ *::after {
+   box-sizing: border-box;
+ }
+ 
+ body {
+   font-family: 'Raleway', sans-serif;
+   background: linear-gradient(to right, #d39797, #d29595);
+   color: white;
+   margin: 0;
+   padding: 20px;
+   background-image: url('login.jpg');
+   background-size: cover;
+   background-position: center;
+   background-attachment: fixed;
+ }
+ 
+ h1.neon-text {
+   font-size: 3rem;
+   text-align: center;
+   font-family: 'Orbitron', sans-serif;
+   text-shadow: 0 0 10px #ff4d4d, 0 0 20px #ff1a1a, 0 0 30px #cc0000;
+   animation: glow 1.5s ease-in-out infinite alternate;
+ }
+ 
+ @keyframes glow {
+   from {
+     text-shadow: 0 0 5px #ff4d4d, 0 0 10px #ff1a1a, 0 0 20px #cc0000;
+   }
+   to {
+     text-shadow: 0 0 10px #ff6666, 0 0 20px #ff1a1a, 0 0 30px #cc0000, 0 0 40px #990000;
+   }
+ }
+ 
+ .card {
+   background: rgba(255, 255, 255, 0.1);
+   padding: 20px;
+   border-radius: 12px;
+   margin: 20px auto;
+   max-width: 600px;
+   box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+   background-color: #63181879;
+   
+ }
+ 
+ form input,
+ form textarea,
+ form select {
+   width: 100%;
+   margin: 10px 0;
+   padding: 12px;
+   border-radius: 10px;
+   border: none;
+   outline: none;
+   font-size: 1rem;
+   background-color: #f4f4f4;
+   color: #000;
+ }
+ 
+ .map {
+   height: 300px;
+   width: 100%;
+   border-radius: 12px;
+   background-color: #fff;
+ }
+ 
+ /* Glowing button style */
+ .glowing-btn {
+   display: inline-block;
+   position: relative;
+   color: var(--glow-color);
+   cursor: pointer;
+   padding: 0.5em 1.5em;
+   border: 0.15em solid var(--glow-color);
+   border-radius: 0.5em;
+   background: none;
+   font-size: 1.2rem;
+   font-weight: bold;
+   text-transform: uppercase;
+   margin-top: 10px;
+   transition: all 0.3s ease-in-out;
+ }
+ 
+ .glowing-btn .glowing-txt {
+   text-shadow: 0 0 5px rgb(50, 20, 20), 0 0 10px var(--glow-color), 0 0 15px var(--glow-color);
+ }
+ 
+ .glowing-btn:hover {
+   background-color: var(--glow-color);
+   color: black;
+   box-shadow: 0 0 20px var(--glow-color), 0 0 30px var(--glow-color);
+ }

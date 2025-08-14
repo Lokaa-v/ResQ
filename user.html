@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ResQ - User Dashboard</title>
+  <link rel="stylesheet" href="user.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet" />
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7mxZD1veHe7gJR1Gkp-CxGxS4zBc3dkw" defer></script>
+  <script src="user.js" defer></script>
+</head>
+<body>
+  <h1 class="neon-text">ResQ - User Dashboard</h1>
+
+  <!-- 1. File Missing Person Case -->
+  <section class="card">
+    <h2>1. File a Missing Person Report</h2>
+    <form id="missingForm" enctype="multipart/form-data">
+      <input type="text" id="name" placeholder="Full Name" required />
+      <input type="number" id="age" placeholder="Age" required />
+      <input type="text" id="location" placeholder="Last Seen Location" required />
+
+      <select id="district" required>
+        <option value="" disabled selected>Select District</option>
+        <option>Ariyalur</option>
+        <option>Chengalpattu</option>
+        <option>Chennai</option>
+        <option>Coimbatore</option>
+        <option>Cuddalore</option>
+        <option>Dharmapuri</option>
+        <option>Dindigul</option>
+        <option>Erode</option>
+        <option>Kallakurichi</option>
+        <option>Kanchipuram</option>
+        <option>Kanyakumari</option>
+        <option>Karur</option>
+        <option>Krishnagiri</option>
+        <option>Madurai</option>
+        <option>Nagapattinam</option>
+        <option>Namakkal</option>
+        <option>Nilgiris</option>
+        <option>Perambalur</option>
+        <option>Pudukkottai</option>
+        <option>Ramanathapuram</option>
+        <option>Ranipet</option>
+        <option>Salem</option>
+        <option>Sivaganga</option>
+        <option>Tenkasi</option>
+        <option>Thanjavur</option>
+        <option>Theni</option>
+        <option>Thoothukudi</option>
+        <option>Tiruchirappalli</option>
+        <option>Tirunelveli</option>
+        <option>Tirupathur</option>
+        <option>Tiruppur</option>
+        <option>Tiruvallur</option>
+        <option>Tiruvannamalai</option>
+        <option>Tiruvarur</option>
+        <option>Vellore</option>
+        <option>Viluppuram</option>
+        <option>Virudhunagar</option>
+      </select>
+
+      <textarea id="description" placeholder="Description"></textarea>
+
+      <!-- ✅ Upload Missing Person Photo -->
+      <div class="card">
+        <h3>Upload Photo of Missing Person</h3>
+        <input type="file" id="photo" name="file" accept="image/*" required />
+      </div>
+
+      <button type="submit" class="glowing-btn">
+        <span class="glowing-txt">SUBMIT</span>
+      </button>
+    </form>
+  </section>
+
+  <!-- 2. Last Seen Location on Map -->
+  <section class="card">
+    <h2>2. Last Seen Location</h2>
+    <div id="map" class="map">Loading map...</div>
+  </section>
+
+  <!-- 3. Track Case Status -->
+  <section class="card">
+    <h2>3. Track Case Status</h2>
+    <p>Status: <span id="status">Pending</span></p>
+    <button onclick="updateStatus()" class="glowing-btn">
+      <span class="glowing-txt">STATUS</span>
+    </button>
+  </section>
+</body>
+</html>
