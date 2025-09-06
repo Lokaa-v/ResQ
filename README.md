@@ -37,16 +37,16 @@ It makes the **reporting, tracking, and case management process seamless** for c
 ## 🖼️ Screenshots  
 
 ### Landing Page (User, Police, Admin Selection)  
-![Landing Page](./screenshots/1.png)  
+![Landing Page](./1.png)  
 
 ### User Dashboard (Reporting Form)  
-![User Dashboard](./screenshots/2.1.png)  
+![User Dashboard](./2.1.png)  
 
 ### Map Integration & Case Status  
-![Last Seen Location and Status](./screenshots/2.2.png)  
+![Last Seen Location and Status](./2.2.png)  
 
 ### Police Login  
-![Police Login](./screenshots/3.1.png)  
+![Police Login](./3.1.png)  
 
 ---
 
